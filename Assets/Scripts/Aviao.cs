@@ -6,6 +6,7 @@ public class Aviao : MonoBehaviour
 {
 
     public float alturaDoPulo;
+    
     public Rigidbody2D oRigidbody2D;
 
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class Aviao : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            oRigidbody2D.velocity = Vector2.zero;
             oRigidbody2D.AddForce(Vector2.up * alturaDoPulo);
         }
     }
