@@ -10,26 +10,46 @@ public class GameManager : MonoBehaviour
 
     public Text pontuacaoTexto;
 
+    public bool jogoPausado;
+
     // Start is called before the first frame update
     void Start()
     {
-        pontuacao = 0;
+        this.pontuacao = 0;
         this.mostrarPontos();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            this.PausarJogo();
+        }
     }
 
     public void AumentarPontuacao()
     {
-        pontuacao += 1;
+        this.pontuacao += 1;
         this.mostrarPontos();
     }
 
-    private void mostrarPontos(){
-        this.pontuacaoTexto.text = pontuacao.ToString();
+    public void PausarJogo()
+    {
+        if (this.jogoPausado)
+        {
+            Time.timeScale = 1f;
+            this.jogoPausado = false;
+        }
+        else
+        {
+            Time.timeScale = 0f;
+            this.jogoPausado = true;
+        }
+    }
+
+    private void mostrarPontos()
+    {
+        this.pontuacaoTexto.text = this.pontuacao.ToString();
     }
 }

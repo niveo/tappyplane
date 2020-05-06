@@ -10,6 +10,12 @@ public class MontanhasEestrelas : MonoBehaviour
 
     public float tempoAtualMontanhas;
 
+    public GameObject[] estrelas;
+
+    public float tempoEntreAsEstrelas;
+
+    public float tempoAtualEstrelas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,15 @@ public class MontanhasEestrelas : MonoBehaviour
             Instantiate(montanhas[montanhaAleatorio], transform.position, transform.rotation);
 
             tempoAtualMontanhas = tempoEntreAsMontanhas;
+        }
+
+        tempoAtualEstrelas -= Time.deltaTime;
+        if (tempoAtualEstrelas <= 0)
+        {
+            int estrelaAleatorio = Random.Range(0, estrelas.Length);
+            Instantiate(estrelas[estrelaAleatorio], transform.position, transform.rotation);
+
+            tempoAtualEstrelas = tempoEntreAsEstrelas;
         }
     }
 }

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Estrelas : MonoBehaviour
 {
-   private void OnTriggerEnter2D(Collider2D other) {
+   void OnTriggerEnter2D(Collider2D other) {
        if(other.gameObject.CompareTag("Player")){
            FindObjectOfType<GameManager>().AumentarPontuacao();
-
            Destroy(this.gameObject);
        }
    }
