@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public bool jogoPausado;
 
+    public GameObject pausePainel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +40,13 @@ public class GameManager : MonoBehaviour
     {
         if (this.jogoPausado)
         {
+            this.pausePainel.SetActive(false);
             Time.timeScale = 1f;
             this.jogoPausado = false;
         }
         else
         {
+            this.pausePainel.SetActive(true);
             Time.timeScale = 0f;
             this.jogoPausado = true;
         }
@@ -52,4 +56,23 @@ public class GameManager : MonoBehaviour
     {
         this.pontuacaoTexto.text = this.pontuacao.ToString();
     }
+
+    public void CarregarTelaDeCreditos()
+    {
+        //Carregar tela de créditos
+
+    }
+
+    public void SairDoJog()
+    {
+        Debug.Log("Saiu do Jogo");
+        Application.Quit();
+    }
+
+    public void MostrarTelaGameOver()
+    {
+        Debug.Log("GameOver");
+        Time.timeScale = 0f;
+    }
+
 }

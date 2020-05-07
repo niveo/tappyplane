@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 4635113795387381919}
   - component: {fileID: 8468984290797106637}
   - component: {fileID: 6665915327008242307}
+  - component: {fileID: 4420679684762205754}
   m_Layer: 0
   m_Name: montanha_cima
   m_TagString: Untagged
@@ -204,6 +205,18 @@ PolygonCollider2D:
       - {x: 0.19999999, y: -1.155}
       - {x: 0.19999999, y: -1.0649999}
       - {x: 0.29, y: -0.255}
+--- !u!114 &4420679684762205754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2645396991002695637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589b999dba25ecd49a75973fe9cffa18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3619321484615808826
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +275,7 @@ GameObject:
   - component: {fileID: 1655513248871961236}
   - component: {fileID: 3753196741400280944}
   - component: {fileID: 6158368705796403325}
+  - component: {fileID: 2481096497557031373}
   m_Layer: 0
   m_Name: montanha_baixo
   m_TagString: Untagged
@@ -387,3 +401,15 @@ PolygonCollider2D:
       - {x: 0.53999996, y: -1.1949999}
       - {x: 0.53999996, y: -1.005}
       - {x: 0.51, y: -0.775}
+--- !u!114 &2481096497557031373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4816381746881875362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 589b999dba25ecd49a75973fe9cffa18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
